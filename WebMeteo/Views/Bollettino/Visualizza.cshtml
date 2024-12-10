@@ -1,0 +1,63 @@
+@model WebMeteo.ViewModels.BollettinoVisualizzaViewModels
+@{
+    Layout = null;
+}
+
+<style>
+    .custom-header {
+        background-color: #cce5ff; 
+        color: #004085; 
+    }
+
+    .custom-row:nth-child(even) {
+        background-color: #f0f9ff; 
+    }
+
+    .custom-row:hover {
+        background-color: #d6e9f5; 
+    }
+</style>
+
+@if (Model != null && Model.Localita != null && Model.Localita.Any())
+{
+    <div class="container mt-5">
+        <h2 class="text-center mb-4 text-primary">Bollettino Meteo</h2>
+        <table class="table table-bordered text-center">
+            <thead class="custom-header">
+                <tr>
+                    <th>Località</th>
+                    <th>Quota</th>
+                    <th>Giorno</th>
+                    <th>Temp. Minima</th>
+                    <th>Temp. Massima</th>
+                    <th>Descrizione Condizioni</th>
+                    <th>Icona</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Localita.Count; i++)
+                {
+                    <tr class="custom-row">
+                        <td>@Model.Localita[i]</td>
+                        <td>@Model.Quota[i]</td>
+                        <td>@Model.Giorno[i]</td>
+                        <td>@Model.TemperaturaMinima[i]</td>
+                        <td>@Model.TemperaturaMassima[i]</td>
+                        <td>@Model.DescrizioneCondizioni[i]</td>
+                        <td>
+                            <img src="@Model.Icona[i]" alt="Icona Meteo" class="img-fluid" style="max-height: 50px;">
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="container mt-5">
+        <div class="alert alert-info text-center" role="alert">
+            <strong>Attenzione:</strong> Nessuna informazione disponibile.
+        </div>
+    </div>
+}
