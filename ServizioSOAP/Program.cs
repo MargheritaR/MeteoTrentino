@@ -1,10 +1,30 @@
-﻿namespace ServizioSOAP
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using ServizioSOAP.Servizio;
+using SoapCore;
+
+namespace ServizioSOAP
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddSoapCore();
+            builder.Services.AddScoped<IMeteoSoap,MeteoSoap>();
+
+            var app = builder.Build();
+
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.UseSoapEndpoint<IMeteoSoap>("/SOAPMeteo.wsdl", 
+                    new SoapEncoderOptions(), SoapSerializer.XmlSerializer);
+            });
+
+            app.Run();
         }
     }
 }
