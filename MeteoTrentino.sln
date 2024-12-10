@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelli", "Modelli\Modelli.csproj", "{DB95698E-ADB1-42B9-8821-23ED7C37B7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelli", "Modelli\Modelli.csproj", "{DB95698E-ADB1-42B9-8821-23ED7C37B7B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoServizi", "MeteoServizi\MeteoServizi.csproj", "{CE0926B0-5A71-44B5-94B4-C82B8FA3340C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeteoServizi", "MeteoServizi\MeteoServizi.csproj", "{CE0926B0-5A71-44B5-94B4-C82B8FA3340C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServizioSOAP", "ServizioSOAP\ServizioSOAP.csproj", "{22D0B431-0C08-4A35-A543-7F85E70F4F8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{CE0926B0-5A71-44B5-94B4-C82B8FA3340C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE0926B0-5A71-44B5-94B4-C82B8FA3340C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE0926B0-5A71-44B5-94B4-C82B8FA3340C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3A26B27-BF8B-4165-B2F9-BF75DACA3ED7}
 	EndGlobalSection
 EndGlobal
