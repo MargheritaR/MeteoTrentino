@@ -1,5 +1,6 @@
 using MeteoServizi;
 using Microsoft.AspNetCore.Mvc;
+using WebMeteo.ViewModels;
 
 namespace WebMeteo.Controllers;
 
@@ -13,18 +14,18 @@ public class BollettinoController : Controller
 
             if (bollettino != null)
             {
-                return View(bollettino);
+                BollettinoVisualizzaViewModels vm = new BollettinoVisualizzaViewModels(bollettino);
+                return View(vm);
             }
             else
             {
-                return NotFound();
+                return View("C'è stato un errore");
             }
             
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            throw;
+            return View("C'è stato un errore");
         }
     }
 }
