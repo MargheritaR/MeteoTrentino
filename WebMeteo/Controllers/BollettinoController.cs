@@ -19,13 +19,13 @@ public class BollettinoController : Controller
             }
             else
             {
-                return View("C'è stato un errore");
+                return View("errore");
             }
             
         }
         catch (Exception e)
         {
-            return View("C'è stato un errore");
+            return View("errore");
         }
     }
 }
