@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeteoServizi", "MeteoServiz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServizioSOAP", "ServizioSOAP\ServizioSOAP.csproj", "{22D0B431-0C08-4A35-A543-7F85E70F4F8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMeteo", "WebMeteo\WebMeteo.csproj", "{A4384264-AE17-4B82-A30C-8C46A5B9B918}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22D0B431-0C08-4A35-A543-7F85E70F4F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4384264-AE17-4B82-A30C-8C46A5B9B918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4384264-AE17-4B82-A30C-8C46A5B9B918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4384264-AE17-4B82-A30C-8C46A5B9B918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4384264-AE17-4B82-A30C-8C46A5B9B918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
