@@ -1,0 +1,19 @@
+version: '3.4'
+
+
+services:
+  webmeteo:
+    image: ${DOCKER_REGISTRY-}webmeteo
+    build:
+      context: .
+      dockerfile: WebMeteo/Dockerfile
+    ports:
+       - 62274:8080
+
+  serviziosoap:
+    image: ${DOCKER_REGISTRY-}serviziosoap
+    build:
+      context: .
+      dockerfile: ServizioSOAP/Dockerfile
+    ports:
+       - 62275:8080  
